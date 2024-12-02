@@ -15,7 +15,7 @@ const geistMono = localFont({
 export default function Home() {
   return (
     <>
-        <Head>
+        <head>
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYDNGNXCYY"></script>
         <script
@@ -28,7 +28,7 @@ export default function Home() {
             `,
           }}
         />
-      </Head>
+      </head>
       <div
       className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
     >
