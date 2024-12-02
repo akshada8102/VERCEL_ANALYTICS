@@ -14,7 +14,22 @@ const geistMono = localFont({
 
 export default function Home() {
   return (
-    <div
+    <>
+        <Head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYDNGNXCYY"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-RYDNGNXCYY');
+            `,
+          }}
+        />
+      </Head>
+      <div
       className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
     >
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
@@ -28,7 +43,7 @@ export default function Home() {
         />
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
-            Get started by editing{" "}
+            HELLLLLLLLLOOOOO{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
               pages/index.js
             </code>
@@ -111,5 +126,8 @@ export default function Home() {
         </a>
       </footer>
     </div>
+    </>
+
+   
   );
 }
